@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SRT Extractor</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="hero">
+        <p class="kicker">Local Desktop Subtitle Tool</p>
+        <h1>Extract Subtitles From Video</h1>
+        <p class="subcopy">
+          Pick a local video file, transcribe audio on your machine, preview generated subtitles,
+          and save an <strong>.srt</strong> file.
+        </p>
+      </section>
+
+      <section class="card">
+        <label class="file-label" for="videoFile">Video file</label>
+        <input id="videoFile" type="file" accept="video/*" />
+
+        <label class="file-label" for="modeSelect">Extraction mode</label>
+        <select id="modeSelect">
+          <option value="transcribe">Transcribe audio (Whisper)</option>
+          <option value="embedded">Extract embedded subtitle track</option>
+        </select>
+
+        <div id="trackRow" class="track-row is-hidden">
+          <label class="file-label" for="trackSelect">Embedded subtitle track</label>
+          <select id="trackSelect"></select>
+        </div>
+
+        <div class="actions">
+          <button id="extractBtn" type="button">Extract Subtitles</button>
+          <button id="saveBtn" type="button" disabled>Save .srt</button>
+        </div>
+
+        <p id="status" class="status">Idle.</p>
+
+        <label class="preview-label" for="preview">SRT preview</label>
+        <textarea id="preview" readonly placeholder="Generated subtitles will appear here..."></textarea>
+      </section>
+    </main>
+
+    <script src="./renderer.js"></script>
+  </body>
+</html>
