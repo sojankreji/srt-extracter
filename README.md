@@ -1,6 +1,6 @@
 # SRT Extractor
 
-Turn spoken video into clean subtitle files in minutes.
+Turn  video into  subtitle files in minutes.
 
 SRT Extractor is a local-first Electron desktop app that helps you generate `.srt` subtitles from video files using either speech transcription or embedded subtitle stream extraction.
 
